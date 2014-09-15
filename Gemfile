@@ -30,8 +30,6 @@ gem 'gravtastic'
 # gem 'ng-rails-csrf'
 # gem 'angular-rails-templates', '0.0.7'
 
-gem 'backup', require: false
-
 gem 'simple_form', '3.0.2'
 gem 'rails_admin', '0.6.2'
 
