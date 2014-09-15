@@ -1,0 +1,20 @@
+@mixin font-face( $fontFamily, $fileName, $weight: 400, $style: normal ) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url('#{$fileName}.eot');
+    src: url('#{$fileName}.eot?#iefix')          format('embedded-opentype'),
+         url('#{$fileName}.woff')                format('woff'),
+         url('#{$fileName}.ttf')                 format('truetype'),
+         url('#{$fileName}.svg##{$fontFamily}')  format('svg');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin content-width( $width ){
+  width: $width;
+  margin: 0 auto;
+  @media screen and (max-width: $width) {
+    width: 96%;
+  }
+}
