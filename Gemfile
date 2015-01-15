@@ -14,27 +14,20 @@ gem 'mongoid', '~> 4.0.0'
 gem 'mongoid-grid_fs', '2.1.0'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'high_voltage', '~> 2.2.0'
-gem 'newrelic_rpm'
 gem 'cancancan', '1.9.2'
 gem 'kaminari', '0.16.1'
 gem 'russian'
 gem 'enumerize', '0.8.0'
 # gem 'sidekiq', '3.2.2'
-gem 'underscore-rails'
 gem 'mongoid_slug', '3.2'
 gem 'gravtastic'
-
-# angular
-# gem 'angularjs-rails', '1.2.15'
-# gem 'angular-ui-bootstrap-rails'
-# gem 'ng-rails-csrf'
-# gem 'angular-rails-templates', '0.0.7'
 
 gem 'simple_form', '3.0.2'
 gem 'rails_admin', '0.6.2'
 
-# emails styles
+# email
 gem 'roadie', '2.4.3'
+gem 'mailgun_rails', '0.6.5'
 
 # assets
 gem 'sass-rails', '~> 4.0.3'
@@ -57,8 +50,6 @@ group :development do
   gem 'pry-rails'
   gem 'rubocop'
   gem 'guard-rubocop'
-
-  # gem 'capistrano-rbenv', require: false
 end
 
 group :test do

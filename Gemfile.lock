@@ -40,9 +40,6 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
-    backup (3.4.0)
-      open4 (~> 1.3.0)
-      thor (>= 0.15.4, < 2)
     bcrypt (3.1.7)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -94,7 +91,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     columnize (0.8.9)
-    configatron (4.2.0)
+    configatron (3.2.0)
     connection_pool (2.0.0)
     css_parser (1.3.5)
       addressable
@@ -178,6 +175,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailgun_rails (0.6.5)
+      rails (>= 3.2.13)
+      rest-client (>= 1.6.7)
     meta_request (0.3.4)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -214,10 +214,9 @@ GEM
     net-ssh (2.9.1)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.9.4.245)
+    netrc (0.10.2)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    open4 (1.3.4)
     optionable (0.2.0)
     origin (2.1.1)
     orm_adapter (0.5.0)
@@ -286,6 +285,9 @@ GEM
     remotipart (1.2.1)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -380,7 +382,6 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    underscore-rails (1.7.0)
     unicorn (4.8.3)
       kgio (~> 2.6)
       rack
@@ -395,7 +396,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  backup
   better_errors
   binding_of_caller
   byebug
@@ -404,7 +404,7 @@ DEPENDENCIES
   capybara (= 2.2.1)
   carrierwave-mongoid
   coffee-rails (~> 4.0.1)
-  configatron (= 4.2.0)
+  configatron (~> 3.2)
   cyrax (= 0.7.5)
   database_cleaner (= 1.2.0)
   devise (~> 3.2.4)
@@ -418,13 +418,13 @@ DEPENDENCIES
   jquery-rails
   kaminari (= 0.16.1)
   letter_opener
+  mailgun_rails (= 0.6.5)
   meta_request
   mocha (= 1.0.0)
   mongoid (~> 4.0.0)
   mongoid-grid_fs (= 2.1.0)
   mongoid_slug (= 3.2)
   navigation_link_to (= 0.0.2)
-  newrelic_rpm
   paperclip (~> 4.1.0)
   pry-rails
   quiet_assets (= 1.0.2)
@@ -444,5 +444,4 @@ DEPENDENCIES
   therubyracer
   thin (= 1.6.2)
   uglifier (~> 2.5.0)
-  underscore-rails
   unicorn
